@@ -1,0 +1,51 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box {
+    display: flex;
+    justify-content: space-around;
+
+.list-links
+{
+    flex: 1;
+}
+
+
+.list-links{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    .link {
+   	box-shadow: 0px 1px 1px 0px rgba(0,0,102,0.1);
+   	width: 50%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 6px 2px;
+    margin: 12px;
+
+    	.buttons{
+    		.buttons-left{
+    			float: left;
+    		}
+    		.buttons-right {
+    			float: right;
+    		}
+    	}
+
+    }
+	
+}
+.list-left {
+	  display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.list-right {
+	display: flex;
+	background-color: grey;
+}
+}
