@@ -1,5 +1,5 @@
 
-<%= form_for(@link) do |f| %>
+<%= simple_form_for(@link) do |f| %>
   <% if @link.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
@@ -25,6 +25,6 @@
     <%= f.text_field :url, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
