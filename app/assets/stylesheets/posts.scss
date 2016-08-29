@@ -1,3 +1,9 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 // Place all the styles related to the links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -6,13 +12,13 @@
     display: flex;
     justify-content: space-around;
 
-.list-links
+.list-posts
 {
     flex: 1;
 }
 
 
-.list-links{
+.list-posts {
 	display: flex;
 	flex-direction: column;
     justify-content: center;
@@ -21,13 +27,17 @@
     background-color: #FFFFFF;
     margin: 10px;
 
-    .link {
+    .post {
    	box-shadow: 0px 1px 1px 0px rgba(0,0,102,0.1);
    	width: 75%;
     background-color: #D6E6F2;
     border-radius: 8px;
     padding: 12px;
     margin: 12px;
+    	.post-box {
+		    float: left;
+		    padding-right: 13px;
+    	}
 
     	.buttons{
     		.buttons-left{

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :posts
+  resources :videos
   devise_for :users
   resources :links
  

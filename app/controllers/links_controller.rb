@@ -5,6 +5,8 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.all
+    @videos = Video.all
+    @posts = Post.all
   end
 
   # GET /links/1

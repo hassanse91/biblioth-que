@@ -1,0 +1,11 @@
+<div class="col-md-6 col-md-offset-3">
+
+<h1>Editing Video</h1>
+
+<%= embed(@video.url) %>	
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @video %> |
+<%= link_to 'Back', videos_path %>
+</div>
