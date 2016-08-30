@@ -5,9 +5,9 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
-    @links = Link.all
-    @posts = Post.all
+    @videos = Video.all.reorder("created_at DESC")
+    @links = Link.all.reorder("created_at DESC")
+    @posts = Post.all.reorder("created_at DESC")
   end
 
   # GET /videos/1

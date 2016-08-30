@@ -4,9 +4,9 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
-    @videos = Video.all
-    @posts = Post.all
+    @links = Link.all.reorder("created_at DESC")
+    @videos = Video.all.reorder("created_at DESC")
+    @posts = Post.all.reorder("created_at DESC")
   end
 
   # GET /links/1
