@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
  
-root 'welcome#home'
+root 'livres#index'
   # get 'welcome' => 'welcome#home'
   # The priority is b
   #ased upon order of creation: first created -> highest priority.
