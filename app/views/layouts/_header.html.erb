@@ -12,34 +12,21 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           <% if !user_signed_in? %>
-          <li><%= link_to "sign in", new_user_registration_path, class: "btn btn-default" %> </li>
+          <li><%= link_to "CONNEXION", new_user_registration_path, class: "btn btn-default" %> </li>
           <% else %>
-          <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "btn btn-default" %> </li>
+          <li><%= link_to "DECONNEXION", destroy_user_session_path, method: :delete, class: "btn btn-default" %> </li>
           <% end %>
-           <li class="dropdown" id="step1">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create<span class="caret"></span></a>
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Créer<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><%= link_to "link", new_link_path %></li>
-                <li><%= link_to "Video", new_video_path %> </li>
-                <li id="step2"><%= link_to "Post", new_post_path %></a></li>
+                
+                <li><%= link_to "Livre", new_livre_path %> </li>
+                
               </ul>
             </li>
-          <li><%= link_to "Recent",root_path %></li>
-            <li><%= link_to "Popular", root_path %></li>
+         
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">twitter</a></li>
-            <li>
-            <div class="face-share">
-               <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fbookmark.herokuapp.com&layout=button_count&size=small&mobile_iframe=true&width=82&height=20&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div>
-             
-            </li>
-            <li> 
-            <div class="face-like">
-             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fbookmark.herokuapp.com&width=130&layout=button_count&action=like&size=small&show_faces=true&share=false" width="130" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div> </li>
-          </ul>
+          
         </div><!--/.nav-collapse -->
          
 

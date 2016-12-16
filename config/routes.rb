@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :posts
-  resources :videos
+  resources :livres
   devise_for :users
-  resources :links
+
  
-    root 'links#index'
-    get 'welcome' => 'welcome#home'
+root 'welcome#home'
+  # get 'welcome' => 'welcome#home'
   # The priority is b
   #ased upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829224515) do
+ActiveRecord::Schema.define(version: 20161216171115) do
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20160829224515) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "livres", force: :cascade do |t|
+    t.string   "titre"
+    t.string   "auteur"
+    t.text     "description"
+    t.string   "url"
+    t.integer  "prix"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "posts", force: :cascade do |t|
