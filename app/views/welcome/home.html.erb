@@ -7,7 +7,15 @@
 </header>
 
  <% if @livres.blank? %>
- 	<h1>Veuiller ajouter des Livre : <%= link_to "Ajouter Livre", new_livre_path %> </h1>
+   <div class="jumbotron">
+      <div class="container">
+        <h1>Bienvenue dans votre bibliothèque 
+spécialisée !!</h1>
+        <p>Plus clair, plus pratique, plus convivial, le site des Editions Philippe Duval fait peau neuve !Pensé comme une bibliothèque en ligne, celui-ci fait la part belle aux ouvrages consacrés à la petite enfance, mais aussi aux sciences humaines. 
+	Ainsi, en cliquant par exemple sur l'onglet "Petite enfance" de la page d'accueil, vous arrivez directement au rayon concernant les professionnels de la petite enfance.</p>
+        <p> <%= link_to "Voir plus ..", root_path, class: "btn btn-primary btn-lg" %></p>
+      </div>
+    </div>
  <% else %>
  <div class="container">
 	<div class="row">
