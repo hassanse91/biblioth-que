@@ -25,6 +25,7 @@
   <h1>Prix: <%= @livre.prix %> €</h1>
  
 
-<%= link_to 'Modifier', edit_livre_path(@livre), class: "btn btn-primary" %> 
+<p> <%= link_to 'Modifier', edit_livre_path(@livre), class: "btn btn-primary" %> |
+<%= link_to 'Supprimer', @livre, method: :delete, data: { confirm: 'Vous voulais supprimer le livre?' }, class: "btn btn-default" %></p>
 <%= link_to 'Retourner', root_path, class: "btn btn-default" %>
 </div>

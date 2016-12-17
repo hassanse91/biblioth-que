@@ -11,9 +11,11 @@
       <div class="container">
         <h1>Bienvenue dans votre bibliothèque 
 spécialisée !!</h1>
-        <p>Plus clair, plus pratique, plus convivial, le site des Editions Philippe Duval fait peau neuve !Pensé comme une bibliothèque en ligne, celui-ci fait la part belle aux ouvrages consacrés à la petite enfance, mais aussi aux sciences humaines. 
-	Ainsi, en cliquant par exemple sur l'onglet "Petite enfance" de la page d'accueil, vous arrivez directement au rayon concernant les professionnels de la petite enfance.</p>
-        <p> <%= link_to "Voir plus ..", root_path, class: "btn btn-primary btn-lg" %></p>
+        <p>Plus clair, plus pratique, plus convivial, le site LivresApp est une bibliothèque en ligne, celui-ci fait la part belle aux ouvrages .
+	Ainsi, en cliquant par exemple sur l'onglet "Créer", puis selectionner la partie Livre, vous arrivez directement au rayon concernant à la creation d'un nouveau livre, mais tous cela n'ai fait qu'après une bonne authentification.</p> 
+	<strong>Admin</strong>
+
+  <p> <%= link_to "Créer un livre ..", new_livre_path, class: "btn btn-primary btn-lg" %></p>
       </div>
     </div>
  <% else %>
@@ -34,9 +36,6 @@ spécialisée !!</h1>
 	  </div>
 	  </div>
  <% end %>
-
-
-
 <footer class="footer">
       <div class="container">
         <p class="text-muted">2016 créer par Sabri T.</p>
