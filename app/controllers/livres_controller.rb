@@ -15,16 +15,19 @@ class LivresController < ApplicationController
   # GET /livres/new
   def new
     @livre = Livre.new
+    @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 
   # GET /livres/1/edit
   def edit
+      @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 
   # POST /livres
   # POST /livres.json
   def create
     @livre = Livre.new(livre_params)
+    @livre.category_id = params[:category_id]
 
     respond_to do |format|
       if @livre.save
@@ -40,6 +43,7 @@ class LivresController < ApplicationController
   # PATCH/PUT /livres/1
   # PATCH/PUT /livres/1.json
   def update
+    @livre.category_id = params[:category_id]
     respond_to do |format|
       if @livre.update(livre_params)
         format.html { redirect_to @livre, notice: 'Livre was successfully updated.' }
@@ -69,6 +73,6 @@ class LivresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def livre_params
-      params.require(:livre).permit(:titre, :auteur, :description, :url, :prix)
+      params.require(:livre).permit(:titre, :auteur, :description, :url, :prix, :category_id)
     end
 end

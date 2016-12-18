@@ -3,11 +3,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Choisir category") %>
     <%= f.input :titre %>
     <%= f.input :auteur %>
     <%= f.input :description %>
     <%= f.input :url %>
     <%= f.input :prix %>
+    
   </div>
 
   <div class="form-actions">
